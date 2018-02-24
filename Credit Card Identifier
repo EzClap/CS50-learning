@@ -1,0 +1,276 @@
+//Credit card identifier
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    long long number;
+    do
+    {
+        number = get_long_long("Number: ");
+    }
+    while (number < 0);
+
+    int i, j, k, r, t, v, y, n;
+    if (number > 3999999999999 && number < 5000000000000)
+    {
+        n = (number % 10) + ((number / 100) % 10) +
+            ((number / 10000) % 10) + ((number / 1000000) % 10) +
+            ((number / 100000000) % 10) + ((number / 10000000000) % 10) + 4;
+
+        i = ((number / 10) % 10) * 2;
+        j = ((number / 1000) % 10) * 2;
+        k = ((number / 100000) % 10) * 2;
+        r = ((number / 10000000) % 10) * 2;
+        t = ((number / 1000000000) % 10) * 2;
+        v = ((number / 100000000000) % 10) * 2;
+
+        if (i > 9)
+        {
+            i = (i % 10) + 1;
+        }
+        if (j > 9)
+        {
+            j = (j % 10) + 1;
+        }
+        if (k > 9)
+        {
+            k = (k % 10) + 1;
+        }
+        if (r > 9)
+        {
+            r = (r % 10) + 1;
+        }
+        if (t > 9)
+        {
+            t = (t % 10) + 1;
+        }
+        if (v > 9)
+        {
+            v = (v % 10) + 1;
+        }
+
+        if ((n + i + j + k + r + t + v) % 10 == 0)
+        {
+            printf("VISA\n");
+        }
+
+        else
+        {
+            printf("INVALID\n");
+        }
+
+    }
+    else if (number > 339999999999999 && number < 350000000000000)
+    {
+        n = (number % 10) + ((number / 100) % 10) +
+            ((number / 10000) % 10) + ((number / 1000000) % 10) +
+            ((number / 100000000) % 10) + ((number / 10000000000) % 10) +
+            ((number / 1000000000000) % 10) + 3;
+
+        i = ((number / 10) % 10) * 2;
+        j = ((number / 1000) % 10) * 2;
+        k = ((number / 100000) % 10) * 2;
+        r = ((number / 10000000) % 10) * 2;
+        t = ((number / 1000000000) % 10) * 2;
+        v = ((number / 100000000000) % 10) * 2;
+
+        if (i > 9)
+        {
+            i = (i % 10) + 1;
+        }
+        if (j > 9)
+        {
+            j = (j % 10) + 1;
+        }
+        if (k > 9)
+        {
+            k = (k % 10) + 1;
+        }
+        if (r > 9)
+        {
+            r = (r % 10) + 1;
+        }
+        if (t > 9)
+        {
+            t = (t % 10) + 1;
+        }
+        if (v > 9)
+        {
+            v = (v % 10) + 1;
+        }
+
+        if ((n + i + j + k + r + t + v + 8) % 10 == 0)
+        {
+            printf("AMEX\n");
+        }
+
+        else
+        {
+            printf("INVALID\n");
+        }
+    }
+    else if (number > 369999999999999 && number < 380000000000000)
+    {
+        n = (number % 10) + ((number / 100) % 10) +
+            ((number / 10000) % 10) + ((number / 1000000) % 10) +
+            ((number / 100000000) % 10) + ((number / 10000000000) % 10) +
+            ((number / 1000000000000) % 10) + 3;
+
+        i = ((number / 10) % 10) * 2;
+        j = ((number / 1000) % 10) * 2;
+        k = ((number / 100000) % 10) * 2;
+        r = ((number / 10000000) % 10) * 2;
+        t = ((number / 1000000000) % 10) * 2;
+        v = ((number / 100000000000) % 10) * 2;
+
+        if (i > 9)
+        {
+            i = (i % 10) + 1;
+        }
+        if (j > 9)
+        {
+            j = (j % 10) + 1;
+        }
+        if (k > 9)
+        {
+            k = (k % 10) + 1;
+        }
+        if (r > 9)
+        {
+            r = (r % 10) + 1;
+        }
+        if (t > 9)
+        {
+            t = (t % 10) + 1;
+        }
+        if (v > 9)
+        {
+            v = (v % 10) + 1;
+        }
+
+
+        if ((n + i + j + k + r + t + v + 5) % 10 == 0)
+        {
+            printf("AMEX\n");
+        }
+
+        else
+        {
+            printf("INVALID\n");
+        }
+    }
+    else if (number > 3999999999999999 && number < 5000000000000000)
+    {
+        n = (number % 10) + ((number / 100) % 10) +
+            ((number / 10000) % 10) + ((number / 1000000) % 10) +
+            ((number / 100000000) % 10) + ((number / 10000000000) % 10) +
+            ((number / 1000000000000) % 10) + ((number / 100000000000000) % 10);
+
+        i = ((number / 10) % 10) * 2;
+        j = ((number / 1000) % 10) * 2;
+        k = ((number / 100000) % 10) * 2;
+        r = ((number / 10000000) % 10) * 2;
+        t = ((number / 1000000000) % 10) * 2;
+        v = ((number / 100000000000) % 10) * 2;
+        y = ((number / 10000000000000) % 10) * 2;
+
+        if (i > 9)
+        {
+            i = (i % 10) + 1;
+        }
+        if (j > 9)
+        {
+            j = (j % 10) + 1;
+        }
+        if (k > 9)
+        {
+            k = (k % 10) + 1;
+        }
+        if (r > 9)
+        {
+            r = (r % 10) + 1;
+        }
+        if (t > 9)
+        {
+            t = (t % 10) + 1;
+        }
+        if (v > 9)
+        {
+            v = (v % 10) + 1;
+        }
+        if (y > 9)
+        {
+            y = (y % 10) + 1;
+        }
+
+        if ((n + i + j + k + r + t + v + y + 8) % 10 == 0)
+        {
+            printf("VISA\n");
+        }
+
+        else
+        {
+            printf("INVALID\n");
+        }
+    }
+    else if (number > 5099999999999999 && number < 5600000000000000)
+    {
+        n = (number % 10) + ((number / 100) % 10) +
+            ((number / 10000) % 10) + ((number / 1000000) % 10) +
+            ((number / 100000000) % 10) + ((number / 10000000000) % 10) +
+            ((number / 1000000000000) % 10) + ((number / 100000000000000) % 10);
+
+        i = ((number / 10) % 10) * 2;
+        j = ((number / 1000) % 10) * 2;
+        k = ((number / 100000) % 10) * 2;
+        r = ((number / 10000000) % 10) * 2;
+        t = ((number / 1000000000) % 10) * 2;
+        v = ((number / 100000000000) % 10) * 2;
+        y = ((number / 10000000000000) % 10) * 2;
+
+        if (i > 9)
+        {
+            i = (i % 10) + 1;
+        }
+        if (j > 9)
+        {
+            j = (j % 10) + 1;
+        }
+        if (k > 9)
+        {
+            k = (k % 10) + 1;
+        }
+        if (r > 9)
+        {
+            r = (r % 10) + 1;
+        }
+        if (t > 9)
+        {
+            t = (t % 10) + 1;
+        }
+        if (v > 9)
+        {
+            v = (v % 10) + 1;
+        }
+        if (y > 9)
+        {
+            y = (y % 10) + 1;
+        }
+
+        if ((n + i + j + k + r + t + v + y + 1) % 10 == 0)
+        {
+            printf("MASTERCARD\n");
+        }
+
+        else
+        {
+            printf("INVALID\n");
+        }
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
+}
